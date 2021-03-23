@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+.items {
+  height: 100%;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  will-change: transform;
+  transform: scale(0.95);
+  position: relative;
+  font-size: 0;
+  margin-bottom: 2rem;
+}
+
+.scrolsnap-container {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.scrolsnap-child {
+  scroll-snap-align: start;
+}
+
+.items.active {
+  background: rgba(255, 255, 255, 0.3);
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.item {
+  margin: 2rem;
+  width: 200px;
+  height: 200px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 0 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+  pointer-events: none
+}
+.itemspecial{
+  width: 350px;
+}
+
+.item{
+  background: lightblue;
+}
+
+.button{
+  width: 200px;
+  height: 48px;
+  background: lightgray;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover{
+  color: orange;
+}
+
+.hidden{
+  opacity: 0;
+}
+
+.item9{
+  width: 20vw;
+}
+
+.button__previous{
+  transform: rotate(180deg);
+
+}
+
+.button__previous{
+  color: orange;
+}
+
+.button__start{
+  transform: rotate(180deg);
+}
+
+.top{
+  width: 200px;
+  display: flex;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.parent{
+  scroll-snap-type: y mandatory;
+  display: flex;
+}
+
+.child{
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+  scroll-snap-align: center;
+}
